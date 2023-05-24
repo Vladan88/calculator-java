@@ -1,0 +1,16 @@
+1.	Kod ne sadrži komentare ili opis funkcionisanja.
+2.	Metoda "ToString()" u unutarnjoj klasi "Operations" vraća niz karaktera koji predstavlja sve operacije.
+    Međutim, ime metode "ToString()" može biti zbunjujuće jer asocira na predefinisanu metodu "toString()" 
+    koja se koristi za string reprezentaciju objekta. 
+3.	U metodi "Run(String expression)", koristi se metoda "evaluateExpression(expression)" za evaluaciju izraza.
+    Međutim, vraća se  rezultat kao string. Bilo bi bolje vratiti rezultat kao float ili double, 
+    s obzirom da je varijabla "finalResult" deklarisana kao float.
+4.	U metodi "evaluateExpression(String expression)", koristi se niz "numbers" za čuvanje unesenih brojeva. 
+    Međutim, nije obrađen slučaj kada niz "numbers" ostane prazan. 
+5.	U metodi "evaluateExpression(String expression)", koristi se try-catch blok za hvatanje izuzetaka pri rasclanavanju brojeva.
+    Međutim, samo se vraća "ERROR" ako se dogodi izuzetak.
+6.	U metodi "Calculate(List<Float> numbers, List<String> operations)", koristi se statička varijabla "finalResult" 
+    za čuvanje konačnog rezultata. Ovo može uzrokovati probleme ako se metoda "Calculate" poziva iz različitih niti ili 
+    ako se koristi više instanci klase "Calculator". Bolje je promeniti implementaciju tako da se rezultat vraća
+    kao povratna vrednost metode.
+
